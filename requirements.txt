@@ -1,0 +1,10 @@
+# Versions actually used are recorded per session in steps_<slug>/meta.json.
+torch>=2.1
+transformers>=4.38
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels      # analysis only (mixed-model sensitivity)
+matplotlib       # analysis only (figures)
+seqeval          # optional cross-check of entity-level F1
