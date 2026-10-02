@@ -1,0 +1,171 @@
+{
+ "sessions": [
+  {
+   "session": "20261001-082711-ba9c85",
+   "started": "2026-10-01 08:27:38",
+   "host": "ee16bf9502a5",
+   "python": "3.12.13",
+   "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+   "torch": "2.10.0+cu128",
+   "transformers": "5.0.0",
+   "numpy": "2.0.2",
+   "pandas": "2.3.3",
+   "scipy": "1.16.3",
+   "sklearn": "1.6.1",
+   "cuda": "12.8",
+   "cudnn": 91002,
+   "gpu": "Tesla T4",
+   "model": "dmis-lab/biobert-v1.1",
+   "model_commit": "551ca18efd7f052c8dfa0b01c94c2a8e68bc5488",
+   "tokenizer": {
+    "cls": "BertTokenizer",
+    "is_fast": true,
+    "vocab_size": 28996,
+    "do_lower_case": false
+   },
+   "protocol": {
+    "lr": 5e-05,
+    "weight_decay": 0.01,
+    "betas": [
+     0.9,
+     0.999
+    ],
+    "eps": 1e-08,
+    "grad_clip": 1.0,
+    "batch": 8,
+    "max_seq_len": 512,
+    "schedule": "linear decay to 0, no warm-up",
+    "ref_epochs": 5,
+    "K": 5,
+    "rho": 3,
+    "seeds": [
+     64,
+     128,
+     256,
+     512,
+     1024,
+     2048,
+     4096,
+     8192,
+     16384,
+     32768
+    ],
+    "fractions": [
+     [
+      0.02,
+      "2%"
+     ],
+     [
+      0.05,
+      "5%"
+     ],
+     [
+      0.1,
+      "10%"
+     ]
+    ],
+    "primary": [
+     [
+      "Base",
+      "1x"
+     ],
+     [
+      "Base",
+      "match"
+     ],
+     [
+      "Dup",
+      "match"
+     ],
+     [
+      "MR",
+      "match"
+     ],
+     [
+      "COSINER",
+      "match"
+     ]
+    ],
+    "sweep_methods": [
+     "Base",
+     "MR",
+     "COSINER"
+    ],
+    "sweep_budgets": {
+     "2%": [
+      "1x",
+      "2x",
+      "match",
+      "8x",
+      "16x"
+     ],
+     "5%": [],
+     "10%": []
+    },
+    "amp": false,
+    "deterministic": true,
+    "attn_implementation": "eager",
+    "code_version": "2.1",
+    "checkpoint_selection": "none (fixed integer step budget)"
+   },
+   "determinism_check": {
+    "passed": true,
+    "steps": 30,
+    "warnings": []
+   },
+   "data": {
+    "train": {
+     "file": "train.csv",
+     "md5": "9478cf21fb677bf49ee7654dd38643a2",
+     "n_rows": 5433,
+     "n_kept": 5432,
+     "n_dropped": 1,
+     "dropped": [
+      {
+       "row": 5432,
+       "id": "5432",
+       "n_tok": 0,
+       "n_tag": 0
+      }
+     ],
+     "unknown_tag_values": {},
+     "path": "/kaggle/input/datasets/ariunamaoke/ncbi-disease/train.csv"
+    },
+    "validation": {
+     "file": "validation.csv",
+     "md5": "38bb954b3433892bb6ed04c08c48b67c",
+     "n_rows": 924,
+     "n_kept": 923,
+     "n_dropped": 1,
+     "dropped": [
+      {
+       "row": 923,
+       "id": "923",
+       "n_tok": 0,
+       "n_tag": 0
+      }
+     ],
+     "unknown_tag_values": {},
+     "path": "/kaggle/input/datasets/ariunamaoke/ncbi-disease/validation.csv"
+    },
+    "test": {
+     "file": "test.csv",
+     "md5": "d317d4fca3309df15683c8ac7657a893",
+     "n_rows": 941,
+     "n_kept": 940,
+     "n_dropped": 1,
+     "dropped": [
+      {
+       "row": 940,
+       "id": "940",
+       "n_tok": 0,
+       "n_tag": 0
+      }
+     ],
+     "unknown_tag_values": {},
+     "path": "/kaggle/input/datasets/ariunamaoke/ncbi-disease/test.csv"
+    }
+   }
+  }
+ ]
+}
