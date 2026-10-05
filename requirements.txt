@@ -1,10 +1,10 @@
-# Versions actually used are recorded per session in steps_<slug>/meta.json.
-torch>=2.1
-transformers>=4.38
-numpy
-pandas
-scipy
-scikit-learn
+# Versions used for the reported runs (Python 3.12.13, CUDA 12.8, NVIDIA Tesla T4)
+torch==2.10.0
+transformers==5.0.0
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.16.3
+scikit-learn==1.6.1
 statsmodels      # analysis only (mixed-model sensitivity)
 matplotlib       # analysis only (figures)
 seqeval          # optional cross-check of entity-level F1
